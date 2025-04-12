@@ -33,8 +33,7 @@ class GradientButton extends StatelessWidget {
   Widget build(BuildContext context) {
     ThemeData theme = Theme.of(context);
     //确保colors数组不空
-    List<Color> _colors =
-        colors ?? [theme.primaryColor, theme.primaryColorDark];
+    List<Color> _colors = colors ?? [theme.primaryColor, theme.primaryColorDark];
     final radius = borderRadius;
     bool disabled = onPressed == null;
     return DecoratedBox(
@@ -60,10 +59,8 @@ class GradientButton extends StatelessWidget {
                 style: const TextStyle(fontWeight: FontWeight.bold),
                 child: Center(
                   child: DefaultTextStyle(
-                    style: theme.textTheme.button!.copyWith(
-                      color: disabled
-                          ? disabledTextColor ?? Colors.black38
-                          : textColor ?? Colors.white,
+                    style: theme.textTheme.labelLarge!.copyWith(
+                      color: disabled ? disabledTextColor ?? Colors.black38 : textColor ?? Colors.white,
                     ),
                     child: child,
                   ),

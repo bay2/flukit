@@ -25,13 +25,11 @@ class ExtraInfoBoxConstraints<T> extends BoxConstraints {
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
-    return other is ExtraInfoBoxConstraints &&
-        super == other &&
-        other.extra == extra;
+    return other is ExtraInfoBoxConstraints && super == other && other.extra == extra;
   }
 
   @override
   int get hashCode {
-    return hashValues(super.hashCode, extra);
+    return Object.hash(super.hashCode, extra);
   }
 }
